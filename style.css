@@ -1,0 +1,32 @@
+body{
+  padding: 0;
+  height: 100%;
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif; 
+}
+form{
+  background-color: pink;
+  width: 50%;
+ min-height: 80vh;
+  margin-left: 15%;
+  margin-top: 4%;
+  border: 5px solid black;
+}
+
+  .ff{
+    margin-left: 15%;
+  }
+   .preview{
+    height: auto;
+    width: 15%;
+    background-color: rgb(44, 5, 173);
+    color: aliceblue;
+    margin-left: 15%;
+    margin-top:5% ;
+    padding-left: 5%;
+    padding-top: 5%;
+    border:15px solid black;
+   }
+.pbutton{
+  background-color: #A8AEC1;
+}

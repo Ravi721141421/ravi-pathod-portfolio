@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission form </title>
+    
+    <script>
+         function showpreview(){
+            //this is for print roll no and student name//
+      let rollno= document.getElementById("rollno").value;
+      let firstname= document.getElementById("firstsname").value;
+      let lastname=document.getElementById("lastsname").value;
+
+      let fullname= firstname+""+lastname;
+     //to print value//
+      document.getElementById("previewrollno").innerText=rollno;
+      document.getElementById("previewstname").innerText=fullname;
+//this shows father name & mobile no.//
+
+                  let fathername=document.getElementById("fname").value;
+                  let mobileno=document.getElementById("mobileno").value;
+//to print value//
+                  document.getElementById("previewfname").innerText=fathername;
+                  document.getElementById("previewmobileno").innerText=mobileno;
+//this shows dob,email & gender//
+             let dob=document.getElementById("dob").value;
+             let email=document.getElementById("email").value;
+             let genderm=document.getElementById("genm").value;
+             let genderf=document.getElementById("genf").value;
+//to print value//
+                          document.getElementById("previewdob").innerText=dob;
+                          document.getElementById("previewemail").innerText=email;
+                        //this is special for gender choose//
+                         let gender = document.querySelector('input[name="gen"]:checked');
+
+if (gender) {
+    document.getElementById("previewGender").innerText = gender.value;
+}    // the gender selection area//
+
+
+//this shows course//
+let course=document.getElementById("course").value;
+document.getElementById("previewCourse").innerText=course;
+   //this is branch selection
+ let branch = document.querySelector('input[name="branch"]:checked');
+
+if (branch) {
+    document.getElementById("previewbranch").innerText = branch.value;
+
+        }
+        //this shows city  & addresss//
+
+        let city=document.getElementById("city").value;
+        let address=document.getElementById("address").value;
+
+        //this is for get values using js //
+        document.getElementById("previewcity").innerText=city;
+        document.getElementById("previewaddress").innerText=address;
+    
+    
+    
+
+}
+
+    function printForm(){
+    window.print();
+}
+    
+
+
+
+
+
+        
+    </script>
+<link rel="stylesheet" href="./Admission form_files/style.css"></head>
+<body>
+  <center>  <h1> Admission Form </h1></center>
+    <form onsubmit="return false;">
+        <div class="ff">
+        <label for="rollno">Roll no.</label>
+        <input type="text" name="rollno" id="rollno" fdprocessedid="9680fd">
+        <br><br>
+        <label for="sname">Student name:</label>
+        <input type="text" name="sname" id="firstsname" placeholder="First name" required="" fdprocessedid="rueyit">
+        <input type="text" name="sname" id="lastsname" placeholder="Last name" fdprocessedid="xkdw6t">
+        <br><br>
+        <label for="fname">Father name:</label>
+        <input type="text" name="fname" id="fname" required="" fdprocessedid="53kzyc">
+        <br><br>
+          <label for="mobileno">Mobile no.:</label>
+          <input type="tel" name="mobileno" id="mobileno" min="10" value="" required="" fdprocessedid="rtoij6">
+    <br><br>
+        <label for="dob">Date-of-birth:</label>
+          <input type="date" name="dob" id="dob" required="">
+        <br><br>
+         <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required="" fdprocessedid="3zke1e">
+        <br><br>
+       
+       <label for="gen">Gender: </label>
+       <input type="radio" name="gen" id="genm" value="male">Male
+        <input type="radio" name="gen" id="genf" value="female">Female
+        <br><br>
+        <select name="course" id="course" fdprocessedid="owzgos">
+            <option value="Bachlor of technology(B.tech)">Bachlor of technology (B.Tech)</option>
+            <option value="Bachlor of engineering(B.E.)">Bachlor of engineering(B.E.)</option>
+           </select>
+    <br><br>
+        <label for="branch">Branches:</label>
+        <input type="radio" name="branch" id="brancha" value="cse">CSE
+        <input type="radio" name="branch" id="branchb" value="machenical">MACHENICAL
+           <br><br>
+           <label for="photo"> Student photo: </label>
+           <input type="file" name="photo" accept="image/*" id="photo" required="">  
+           <br><br> 
+           <label for="city">City:</label> 
+           <input type="text" name="city" id="city" fdprocessedid="gxc4zo">
+           <br><br>
+           <label for="address">Address</label>   
+           <input type="textarea" name="address" id="address" fdprocessedid="p0fku">
+           <br><br>
+           <button type="button" onclick="showpreview()" fdprocessedid="o6apl">submit</button>
+<input type="reset"> 
+<br><br><br>
+
+    </div></form>
+<div class="preview">
+    <h2>Admssion form 2026-2027</h2>  
+
+    <br><br><br>
+<p>Roll no: <span id="previewrollno"></span></p>Student name: <span id="previewstname"></span><p></p>
+<p>Father name:<span id="previewfname"></span></p>
+<p>Mobile no.<span id="previewmobileno"></span></p>
+<p>Date-of-birth: <span id="previewdob"></span></p>
+<p>Email:<span id="previewemail"></span></p>
+<p>Gender:<span id="previewGender"></span></p>
+<p>Course: <span id="previewCourse"></span></p>
+<p>Branch: <span id="previewbranch"></span></p>
+<p>City: <span id="previewcity"></span></p>
+<p>Address:<span id="previewaddress"></span></p>
+
+ <button onclick="printForm()">Print</button>
+<br><br>
+</div>
+</body>
+</html>
